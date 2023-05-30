@@ -1,9 +1,10 @@
 // type Props = {};
 
-import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button, Carousel } from "flowbite-react";
 import { useEffect, useState } from "react";
+import CoursesList from "../courses/CoursesList";
 
 export default function HomeComponent(/* {}: Props */) {
   const [images, setImages] = useState<string[]>([]);
@@ -18,29 +19,51 @@ export default function HomeComponent(/* {}: Props */) {
   }, []);
 
   return (
-    <section className="h-[80vh] relative ">
-      <div className="absolute inset-0 -z-10">
-        <Carousel
-          indicators
-          slideInterval={7000}
-          leftControl={<></>}
-          rightControl={<></>}
-        >
-          {images.map((image, idx) => (
-            <img src={image} key={idx} alt={idx.toString()} loading="lazy" />
-          ))}
-        </Carousel>
-      </div>
-      <div className="absolute min-h-[60vh] inset-0 bg-[#0239] -z-[1] grid place-items-center ">
-        <div className="flex flex-col justify-between space-y-20 max-w-[605px] font-bold">
-          <h1 className="text-center text-white">
-            Welcome to Computer Science Air Force Base Portal
-          </h1>
-          <span className="mx-auto">
-            <Button gradientDuoTone={"tealToLime"}>Browse Course</Button>
-          </span>
+    <section>
+      <section className="min-h-[85vh] relative ">
+        <div className="absolute inset-0 -z-10">
+          <Carousel
+            indicators
+            slideInterval={7000}
+            leftControl={<></>}
+            rightControl={<></>}
+          >
+            {images.map((image, idx) => (
+              <img src={image} key={idx} alt={idx.toString()} loading="lazy" />
+            ))}
+          </Carousel>
         </div>
-      </div>
+        <div className="absolute min-h-[60vh] inset-0 bg-[#0239] -z-[1] grid place-items-center ">
+          <div className="flex flex-col justify-between space-y-20 max-w-[605px]  p-1 font-semibold">
+            <h1 className="text-center text-white text-3xl tablet:text-4xl to-indigo-800">
+              Welcome to Computer Science Air Force Base Portal
+            </h1>
+            <span className="mx-auto flex text-white">
+              <Button gradientDuoTone={"greenToBlue"} className="text-white">
+                Browse Course{" "}
+                <FontAwesomeIcon icon={faArrowRightLong} className="mx-3" />
+              </Button>
+            </span>
+          </div>
+        </div>
+      </section>
+      <section className="p-4 my-4 space-y-6">
+        <h1 className="text-center text-2xl font-semibold">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </h1>
+        <p className="">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+          doloremque, eius eaque, officiis deserunt quisquam consectetur vero
+          veritatis obcaecati, quas quibusdam nam tempora aliquid repellendus
+          quam sunt architecto beatae blanditiis.
+        </p>
+      </section>
+      <main className="space-y-4 p-6 bg-slate-100">
+        <h4 id="course" className="text-center">
+          Courses
+        </h4>
+        <CoursesList />
+      </main>
     </section>
   );
 }
