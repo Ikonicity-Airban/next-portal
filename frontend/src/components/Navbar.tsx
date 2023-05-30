@@ -15,7 +15,7 @@ export default function NavbarComponent(/* {}: Props */) {
 
   return (
     <section className=" w-full" style={{}}>
-      <Navbar fluid rounded className="main-nav-bar  sticky top-20">
+      <Navbar fluid rounded className="main-nav-bar sticky top-0 w-full">
         <Navbar.Brand>
           <div className="md:hidden px-2">
             <Navbar.Toggle />
@@ -32,7 +32,10 @@ export default function NavbarComponent(/* {}: Props */) {
           </Link>
         </Navbar.Brand>
         <div className="mobile:order-2 hidden mobile:block pr-6">
-          <Button className="px-4 bg-primary" gradientDuoTone={"tealToLime"}>
+          <Button
+            className="px-4 bg-primary shadow-md"
+            gradientDuoTone={"tealToLime"}
+          >
             <Link to="/login">Login</Link>
           </Button>
         </div>
