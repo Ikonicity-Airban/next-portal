@@ -5,7 +5,7 @@ import { Link, NavLink, NavLinkProps } from "react-router-dom";
 
 export default function NavbarComponent(/* {}: Props */) {
   const activeLink: NavLinkProps["className"] = ({ isActive, isPending }) =>
-    `px-4 py-1 font-bold ${
+    `px-2 py-1 font-bold ${
       isPending
         ? "text-gray-700"
         : isActive
@@ -26,12 +26,12 @@ export default function NavbarComponent(/* {}: Props */) {
             src="https://flowbite.com/docs/images/logo.svg"
           />
           <Link to="/login">
-            <span className="self-center whitespace-nowrap text-primary text-xl font-extrabold dark:text-white">
+            <span className="self-center whitespace-nowrap text-primary text-lg font-extrabold dark:text-white">
               Computronix
             </span>
           </Link>
         </Navbar.Brand>
-        <div className="mobile:order-2 hidden mobile:block pr-6">
+        <div className="mobile:order-2 hidden mobile:block">
           <Button
             className="px-4 bg-primary shadow-md"
             gradientDuoTone={"tealToLime"}

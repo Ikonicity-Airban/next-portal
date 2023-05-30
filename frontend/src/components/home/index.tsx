@@ -25,11 +25,17 @@ export default function HomeComponent(/* {}: Props */) {
           <Carousel
             indicators
             slideInterval={7000}
-            leftControl={<></>}
-            rightControl={<></>}
+            // leftControl={<></>}
+            // rightControl={<></>}
           >
             {images.map((image, idx) => (
-              <img src={image} key={idx} alt={idx.toString()} loading="lazy" />
+              <img
+                src={image}
+                key={idx}
+                alt={idx.toString()}
+                style={{ objectFit: "cover", height: "100%" }}
+                loading="lazy"
+              />
             ))}
           </Carousel>
         </div>
@@ -62,7 +68,7 @@ export default function HomeComponent(/* {}: Props */) {
         <h4 id="course" className="text-center">
           Courses
         </h4>
-        <CoursesList />
+        <CoursesList courses={Array(3).fill({ name: "Course 1" })} />
       </main>
     </section>
   );

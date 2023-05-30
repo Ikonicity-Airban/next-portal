@@ -1,5 +1,6 @@
 import { Button, Sidebar } from "flowbite-react";
 import { BreadcrumbComponents } from "..";
+import CoursesList from "./CoursesList";
 
 export default function CoursePage() {
   return (
@@ -21,8 +22,11 @@ export default function CoursePage() {
         <div className="p-4 shadow-md">
           <BreadcrumbComponents />
         </div>
-        <div className="flex p-4">
-          <Sidebar aria-label="Sidebar with content separator example">
+        <div className="flex p-4 flex-col mobile:flex-row">
+          <Sidebar
+            aria-label="Sidebar with content separator example"
+            className="w-full mobile:w-72"
+          >
             <Sidebar.Items>
               <h4>All Courses</h4>
               <Sidebar.ItemGroup>
@@ -31,11 +35,15 @@ export default function CoursePage() {
                 <Sidebar.Item>Robotics</Sidebar.Item>
               </Sidebar.ItemGroup>
               <Sidebar.ItemGroup>
-                <Button gradientDuoTone="greenToBlue">Sign Up</Button>
+                <Sidebar.CTA>
+                  <Button gradientDuoTone="greenToBlue">Sign Up</Button>
+                </Sidebar.CTA>
               </Sidebar.ItemGroup>
             </Sidebar.Items>
           </Sidebar>
-          <div className="p-6">center</div>
+          <div className="p-6 w-full">
+            <CoursesList courses={Array(18).fill({ name: "Course 1" })} />
+          </div>
         </div>
       </main>
     </section>

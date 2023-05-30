@@ -8,10 +8,12 @@ export default function BreadcrumbComponents() {
   const pathArray = location.pathname.split("/").filter((item) => item != "");
   return (
     <Breadcrumb aria-label={location.pathname.toString()}>
-      <Breadcrumb.Item href="/">
-        <FontAwesomeIcon icon={faHomeAlt} className="p-4" />
-        <p>Home</p>
-      </Breadcrumb.Item>
+      <Link to="/">
+        <Breadcrumb.Item>
+          <FontAwesomeIcon icon={faHomeAlt} className="p-4" />
+          <p>Home</p>
+        </Breadcrumb.Item>
+      </Link>
       {pathArray.map((path, i) => (
         <Breadcrumb.Item key={i}>
           <Link to={`/${path}`}>{path}</Link>

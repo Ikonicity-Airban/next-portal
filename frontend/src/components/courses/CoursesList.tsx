@@ -1,22 +1,13 @@
-import { Card } from "flowbite-react";
-import { useState, useEffect } from "react";
+import CoursesComponent from "./CoursesComponent";
 
-export default function CoursesList() {
-  const [courses, setCourses] = useState<Array<string>>([]);
-
-  useEffect(() => {
-    setCourses(Array(9).fill(0));
-  }, []);
-
+interface ICoursePageProps {
+  courses: Array<{ name: string }>;
+}
+export default function CoursesList({ courses }: ICoursePageProps) {
   return (
-    <div className="grid grid-cols-1 tablet:grid-cols-3 p-4 gap-10 tablet:px-6">
+    <div className="grid grid-cols-1 tablet:grid-cols-3 gap-10 w-full">
       {courses.map((item, idx) => (
-        <Card
-          key={idx}
-          className="hover:scale-[1.01] duration-200 hover:shadow-none"
-        >
-          <div className=" h-72">{item}</div>
-        </Card>
+        <CoursesComponent item={item} key={idx} />
       ))}
     </div>
   );
