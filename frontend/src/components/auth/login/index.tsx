@@ -43,7 +43,7 @@ function LoginPage() {
   const currentUser = pathname.split("/")[3];
   //return
   return (
-    <Card className="smallScreens:min-w-[300px] ">
+    <Card className="smallScreens:min-w-[320px] ">
       <span className="flex place-content-center">
         <h3 className="logo-clipped max-w-md">Login Form</h3>
       </span>
@@ -91,7 +91,9 @@ function LoginPage() {
           Submit
         </Button>
       </form>
-      <Link to="/dashboard">dashboard</Link>
+      <Button gradientDuoTone={"greenToBlue"} className="w-full" type="submit">
+        <Link to="/dashboard">dashboard</Link>
+      </Button>
     </Card>
   );
 }

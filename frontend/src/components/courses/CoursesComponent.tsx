@@ -17,7 +17,7 @@ export default function CoursesComponent({ item }: ICoursesProps) {
           <p className="text-xs">category</p>
         </div>
         <hr />
-        <div className="flex justify-between space-x-3">
+        <div className="flex justify-between items-center mx-auto space-x-3 flex-wrap">
           <Rating>
             <Rating.Star />
             <p className="text-xs mx-2">4.2 rating</p>

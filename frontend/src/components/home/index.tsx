@@ -42,7 +42,7 @@ export default function HomeComponent(/* {}: Props */) {
         <div className="absolute min-h-[60vh] inset-0 bg-[#023c] grid place-items-center">
           <div
             id="title"
-            className="flex flex-col justify-between space-y-20 max-w-[605px]  p-1 font-semibold"
+            className="flex flex-col justify-between space-y-20 max-w-[605px]  p-3 font-semibold"
           >
             <h1 className="logo-clipped text-center title-design text-white text-3xl tablet:text-4xl">
               Welcome to Computer Science Air Force Base Portal

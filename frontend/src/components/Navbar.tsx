@@ -15,7 +15,11 @@ export default function NavbarComponent(/* {}: Props */) {
     }`;
 
   return (
-    <Navbar fluid rounded className="z-[999] top-0 w-full">
+    <Navbar
+      fluid
+      rounded
+      className="z-[999] bg-[#fff5] backdrop-blur-lg sticky top-0 w-full"
+    >
       <Navbar.Brand className="flex-[1.9]">
         <div className="md:hidden px-2">
           <Navbar.Toggle />
