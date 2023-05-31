@@ -39,9 +39,12 @@ export default function HomeComponent(/* {}: Props */) {
             ))}
           </Carousel>
         </div>
-        <div className="absolute min-h-[60vh] inset-0 bg-[#0239] -z-[1] grid place-items-center ">
-          <div className="flex flex-col justify-between space-y-20 max-w-[605px]  p-1 font-semibold">
-            <h1 className="text-center text-white text-3xl tablet:text-4xl to-indigo-800">
+        <div className="absolute min-h-[60vh] inset-0 bg-[#023c] -z-[1] grid place-items-center ">
+          <div
+            id="title"
+            className="flex flex-col justify-between space-y-20 max-w-[605px]  p-1 font-semibold"
+          >
+            <h1 className="text-center title-design text-white text-3xl tablet:text-4xl">
               Welcome to Computer Science Air Force Base Portal
             </h1>
             <span className="mx-auto flex text-white">
@@ -64,10 +67,11 @@ export default function HomeComponent(/* {}: Props */) {
           quam sunt architecto beatae blanditiis.
         </p>
       </section>
-      <main className="space-y-4 p-6 bg-slate-100">
-        <h4 id="course" className="text-center">
+      <main className="space-y-4 p-2 bg-slate-100 dark:bg-inherit">
+        <h4 id="course" className="logo text-center text-2xl font-bold">
           Courses
         </h4>
+        <hr />
         <CoursesList courses={Array(3).fill({ name: "Course 1" })} />
       </main>
     </section>

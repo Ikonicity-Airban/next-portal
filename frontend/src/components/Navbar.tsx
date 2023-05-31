@@ -1,37 +1,34 @@
 import { Button, Navbar } from "flowbite-react";
 import { Link, NavLink, NavLinkProps } from "react-router-dom";
+import LogoComponent from "./LogoComponent";
 
 /* type Props = {}; */
 
 export default function NavbarComponent(/* {}: Props */) {
   const activeLink: NavLinkProps["className"] = ({ isActive, isPending }) =>
-    `px-2 py-1 font-bold ${
+    `px-2 py-1 mx-auto font-bold order-1 ${
       isPending
         ? "text-gray-700"
         : isActive
-        ? "border-primary tablet:border-b-2 text-primary"
+        ? "border-primary md:border-b-2 text-primary"
         : ""
     }`;
 
   return (
     <section className=" w-full" style={{}}>
       <Navbar fluid rounded className="main-nav-bar sticky top-0 w-full">
-        <Navbar.Brand>
+        <Navbar.Brand clas>
           <div className="md:hidden px-2">
             <Navbar.Toggle />
           </div>
-          <img
-            alt="Flowbite Logo"
-            className="mr-3 h-6 mobile:h-9"
-            src="https://flowbite.com/docs/images/logo.svg"
-          />
+          <LogoComponent />
           <Link to="/login">
-            <span className="self-center whitespace-nowrap text-primary text-lg font-extrabold dark:text-white">
+            <span className="logo p-0 pl-4 whitespace-nowrap text-primary text-lg font-extrabold">
               Computronix
             </span>
           </Link>
         </Navbar.Brand>
-        <div className="mobile:order-2 hidden mobile:block">
+        <div className="order-2 hidden mx-auto sm:mx-0 mobile:block">
           <Button
             className="px-4 bg-primary shadow-md"
             gradientDuoTone={"tealToLime"}
@@ -40,6 +37,14 @@ export default function NavbarComponent(/* {}: Props */) {
           </Button>
         </div>
         <Navbar.Collapse className="py-1 my-1">
+          <div className="order-2 mx-auto mobile:hidden">
+            <Button
+              className="px-4 bg-primary shadow-md"
+              gradientDuoTone={"tealToLime"}
+            >
+              <Link to="/login">Login</Link>
+            </Button>
+          </div>
           <NavLink to="/" title="Home" className={activeLink}>
             Home
           </NavLink>

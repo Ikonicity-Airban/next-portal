@@ -11,6 +11,24 @@
   padding: 0;
   box-sizing: border-box;
 }
+.title {
+  color: transparent;
+  background: linear-gradient(
+    135deg,
+    rgb(17, 244, 66),
+    white,
+    rgb(0, 255, 255),
+    white,
+    orange
+  );
+  background-clip: text;
+}
+
+.logo {
+  color: transparent;
+  background: linear-gradient(135deg, rgb(17, 244, 66), rgb(0, 255, 255));
+  background-clip: text;
+}
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
