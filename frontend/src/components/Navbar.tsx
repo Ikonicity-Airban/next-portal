@@ -15,51 +15,49 @@ export default function NavbarComponent(/* {}: Props */) {
     }`;
 
   return (
-    <section className=" w-full" style={{}}>
-      <Navbar fluid rounded className="main-nav-bar sticky top-0 w-full">
-        <Navbar.Brand className="flex-[1.9]">
-          <div className="md:hidden px-2">
-            <Navbar.Toggle />
-          </div>
-          <LogoComponent />
-          <Link to="/">
-            <span className="logo-clipped p-0 pl-4 whitespace-nowrap text-primary text-lg font-extrabold">
-              Computronix
-            </span>
+    <Navbar fluid rounded className="z-[999] top-0 w-full">
+      <Navbar.Brand className="flex-[1.9]">
+        <div className="md:hidden px-2">
+          <Navbar.Toggle />
+        </div>
+        <LogoComponent />
+        <Link to="/">
+          <span className="logo-clipped p-0 pl-4 whitespace-nowrap text-primary text-lg font-extrabold">
+            Computronix
+          </span>
+        </Link>
+      </Navbar.Brand>
+      <div className=" hidden md:order-1 sm:mx-0 mobile:flex tablet:justify-end tablet:flex-[2]">
+        <Button
+          className="px-4 bg-primary shadow-md text-white"
+          gradientDuoTone={"greenToBlue"}
+        >
+          <Link to="/login" className="hover:text-white">
+            Login
           </Link>
-        </Navbar.Brand>
-        <div className=" hidden md:order-1 sm:mx-0 mobile:flex tablet:justify-end tablet:flex-[2]">
+        </Button>
+      </div>
+      <Navbar.Collapse className="">
+        <div className="order-2 mx-auto mobile:hidden">
           <Button
             className="px-4 bg-primary shadow-md text-white"
             gradientDuoTone={"greenToBlue"}
           >
-            <Link to="/auth/login/student" className="hover:text-white">
+            <Link to="/login" className="hover:text-white">
               Login
             </Link>
           </Button>
         </div>
-        <Navbar.Collapse className="">
-          <div className="order-2 mx-auto mobile:hidden">
-            <Button
-              className="px-4 bg-primary shadow-md text-white"
-              gradientDuoTone={"greenToBlue"}
-            >
-              <Link to="/auth/login/student" className="hover:text-white">
-                Login
-              </Link>
-            </Button>
-          </div>
-          <NavLink to="/" title="Home" className={activeLink}>
-            Home
-          </NavLink>
-          <NavLink to="/courses" title="Home" className={activeLink}>
-            Courses
-          </NavLink>
-          <NavLink to="/about" title="Home" className={activeLink}>
-            About
-          </NavLink>
-        </Navbar.Collapse>
-      </Navbar>
-    </section>
+        <NavLink to="/" title="Home" className={activeLink}>
+          Home
+        </NavLink>
+        <NavLink to="/courses" title="Home" className={activeLink}>
+          Courses
+        </NavLink>
+        <NavLink to="/about" title="Home" className={activeLink}>
+          About
+        </NavLink>
+      </Navbar.Collapse>
+    </Navbar>
   );
 }
