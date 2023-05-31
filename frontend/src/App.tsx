@@ -5,7 +5,7 @@ import { FooterComponent } from "./components";
 
 function App() {
   return (
-    <section className="desktop:container mx-auto w-[98.75vw] relative">
+    <section className="desktop:container mx-auto w-[98vw] relative">
       {/* header */}
       <NavbarComponent />
       {/* main body */}
