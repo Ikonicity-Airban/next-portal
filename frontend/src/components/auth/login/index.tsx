@@ -2,9 +2,13 @@ import { Button, Card, Checkbox, Label, TextInput } from "flowbite-react";
 import LogoComponent from "../../LogoComponent";
 
 import { useForm, SubmitHandler } from "react-hook-form";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faKey } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+
+import axios from "axios";
+import { Types } from "../../../api/reducer";
+import { ILoginResponse } from "../../../api/@types";
+import { useContext } from "react";
+import { AppContext } from "../../../api/context";
 
 interface IFormInput {
   email: string;
@@ -13,8 +17,26 @@ interface IFormInput {
 
 function LoginPage() {
   const { register, handleSubmit } = useForm<IFormInput>();
-  const onSubmit: SubmitHandler<IFormInput> = (data) => console.log(data);
 
+  const { dispatch } = useContext(AppContext);
+  const onSubmit: SubmitHandler<IFormInput> = async (data) => {
+    try {
+      const { data: user } = await axios.post<ILoginResponse>(
+        "http://localhost:6986/api/v1/login",
+        data
+      );
+
+      dispatch({
+        type: Types.login,
+        payload: user,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const { pathname } = useLocation();
+  const currentUser = pathname.split("/")[3];
   //return
   return (
     <Card className="smallScreens:min-w-[300px] ">
@@ -25,7 +47,12 @@ function LoginPage() {
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
         <div>
           <div className="mb-2 block">
-            <Label htmlFor="email1" value="Your email" />
+            <Label
+              htmlFor="email1"
+              value={
+                currentUser == "student" ? "Student Email" : "Instructor Email"
+              }
+            />
           </div>
           <TextInput
             id="email1"

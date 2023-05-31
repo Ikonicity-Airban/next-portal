@@ -11,12 +11,14 @@ export default function BreadcrumbComponents() {
       <Link to="/">
         <Breadcrumb.Item>
           <FontAwesomeIcon icon={faHomeAlt} className="p-4" />
-          <p>Home</p>
+          <p className="text-sm">Home</p>
         </Breadcrumb.Item>
       </Link>
       {pathArray.map((path, i) => (
         <Breadcrumb.Item key={i}>
-          <Link to={`/${path}`}>{path}</Link>
+          <Link to={`/${path}`} className="text-sm">
+            {path}
+          </Link>
         </Breadcrumb.Item>
       ))}
     </Breadcrumb>

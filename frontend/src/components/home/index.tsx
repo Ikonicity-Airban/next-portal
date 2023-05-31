@@ -19,9 +19,9 @@ export default function HomeComponent(/* {}: Props */) {
   }, []);
 
   return (
-    <section>
-      <section className="min-h-[85vh] relative ">
-        <div className="absolute inset-0 -z-10">
+    <main>
+      <main className="min-h-[85vh] relative ">
+        <div className="absolute inset-0 -z-1">
           <Carousel
             indicators
             slideInterval={7000}
@@ -39,7 +39,7 @@ export default function HomeComponent(/* {}: Props */) {
             ))}
           </Carousel>
         </div>
-        <div className="absolute min-h-[60vh] inset-0 bg-[#023c] -z-[1] grid place-items-center ">
+        <div className="absolute min-h-[60vh] inset-0 bg-[#023c] grid place-items-center">
           <div
             id="title"
             className="flex flex-col justify-between space-y-20 max-w-[605px]  p-1 font-semibold"
@@ -55,7 +55,7 @@ export default function HomeComponent(/* {}: Props */) {
             </span>
           </div>
         </div>
-      </section>
+      </main>
       <section className="p-4 my-4 space-y-6">
         <h1 className="text-center text-2xl font-semibold">
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -67,13 +67,15 @@ export default function HomeComponent(/* {}: Props */) {
           quam sunt architecto beatae blanditiis.
         </p>
       </section>
-      <main className="space-y-4 p-2 bg-slate-100 dark:bg-inherit">
+      <main className="space-y-4 p-6 bg-slate-100 dark:bg-inherit">
         <h4 id="course" className="logo-clipped text-center text-2xl font-bold">
           Courses
         </h4>
         <hr />
-        <CoursesList courses={Array(3).fill({ name: "Course 1" })} />
+        <div className="sm:px-6 px-3">
+          <CoursesList courses={Array(4).fill({ name: "Course 1" })} />
+        </div>
       </main>
-    </section>
+    </main>
   );
 }
