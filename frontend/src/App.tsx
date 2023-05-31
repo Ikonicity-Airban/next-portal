@@ -6,11 +6,13 @@ import { FooterComponent } from "./components";
 function App() {
   return (
     <main className="desktop:container mx-auto w-[98vw]">
+      {/* header */}
       <NavbarComponent />
-      <div className="min-h-screen">
+      {/* main body */}
+      <div className="min-h-screen flex place-content-center">
+        {/* the children auth */}
         <Outlet />
       </div>
-      {/* main body */}
       <FooterComponent />
       {/* footer */}
     </main>

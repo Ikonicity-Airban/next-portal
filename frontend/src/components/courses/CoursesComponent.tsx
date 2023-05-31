@@ -11,7 +11,7 @@ export default function CoursesComponent({ item }: ICoursesProps) {
       <Modal>
         <Modal.Header></Modal.Header>
       </Modal>
-      <Card imgSrc="https://media.istockphoto.com/id/1452604857/photo/businessman-touching-the-brain-working-of-artificial-intelligence-automation-predictive.webp?b=1&s=170667a&w=0&k=20&c=iJp6e2C-l2lRmyG3ColHMpXe0QYrPnrfQQc2O6PsYC4=">
+      <Card imgSrc="https://plus.unsplash.com/premium_photo-1682787495017-a8f4c7584868?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHNjaG9vbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60">
         <div className="text-center">
           <h4>{item.name}</h4>
           <p className="text-xs">category</p>

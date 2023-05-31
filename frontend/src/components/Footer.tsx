@@ -5,18 +5,19 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Footer } from "flowbite-react";
+import logo from "../assets/logo.svg";
 
 export default function FooterComponent() {
   return (
-    <Footer container className="">
+    <Footer container className="text-sm">
       <div className="w-full">
         <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
           <div>
             <Footer.Brand
               alt="Flowbite Logo"
               href="https://flowbite.com"
-              name="Flowbite"
-              src="https://flowbite.com/docs/images/logo.svg"
+              name="Computronix"
+              src={logo}
             />
           </div>
           <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6">

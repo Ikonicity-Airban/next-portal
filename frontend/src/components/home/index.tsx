@@ -44,7 +44,7 @@ export default function HomeComponent(/* {}: Props */) {
             id="title"
             className="flex flex-col justify-between space-y-20 max-w-[605px]  p-1 font-semibold"
           >
-            <h1 className="text-center title-design text-white text-3xl tablet:text-4xl">
+            <h1 className="logo-clipped text-center title-design text-white text-3xl tablet:text-4xl">
               Welcome to Computer Science Air Force Base Portal
             </h1>
             <span className="mx-auto flex text-white">
@@ -68,7 +68,7 @@ export default function HomeComponent(/* {}: Props */) {
         </p>
       </section>
       <main className="space-y-4 p-2 bg-slate-100 dark:bg-inherit">
-        <h4 id="course" className="logo text-center text-2xl font-bold">
+        <h4 id="course" className="logo-clipped text-center text-2xl font-bold">
           Courses
         </h4>
         <hr />

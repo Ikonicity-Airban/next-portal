@@ -25,10 +25,10 @@ export default function CoursePage() {
         <div className="flex p-4 flex-col mobile:flex-row">
           <Sidebar
             aria-label="Sidebar with content separator example"
-            className="w-full mobile:w-72"
+            className="w-full mobile:w-60"
           >
             <Sidebar.Items>
-              <h4>All Courses</h4>
+              <h4 className="logo-clipped">All Courses</h4>
               <Sidebar.ItemGroup>
                 <Sidebar.Item>Science</Sidebar.Item>
                 <Sidebar.Item>Mathematics</Sidebar.Item>

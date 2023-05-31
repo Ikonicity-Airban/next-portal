@@ -10,12 +10,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 14px;
 }
 .title {
   color: transparent;
   background: linear-gradient(
     135deg,
-    rgb(17, 244, 66),
+    lime,
     white,
     rgb(0, 255, 255),
     white,
@@ -24,7 +25,7 @@
   background-clip: text;
 }
 
-.logo {
+.logo-clipped {
   color: transparent;
   background: linear-gradient(135deg, rgb(17, 244, 66), rgb(0, 255, 255));
   background-clip: text;

@@ -17,42 +17,44 @@ export default function NavbarComponent(/* {}: Props */) {
   return (
     <section className=" w-full" style={{}}>
       <Navbar fluid rounded className="main-nav-bar sticky top-0 w-full">
-        <Navbar.Brand clas>
+        <Navbar.Brand className="">
           <div className="md:hidden px-2">
             <Navbar.Toggle />
           </div>
           <LogoComponent />
-          <Link to="/login">
-            <span className="logo p-0 pl-4 whitespace-nowrap text-primary text-lg font-extrabold">
+          <Link to="/">
+            <span className="logo-clipped p-0 pl-4 whitespace-nowrap text-primary text-lg font-extrabold">
               Computronix
             </span>
           </Link>
         </Navbar.Brand>
-        <div className="order-2 hidden mx-auto sm:mx-0 mobile:block">
+        <div className=" hidden md:order-1 sm:mx-0 mobile:block">
           <Button
-            className="px-4 bg-primary shadow-md"
-            gradientDuoTone={"tealToLime"}
+            className="px-4 bg-primary shadow-md text-white"
+            gradientDuoTone={"greenToBlue"}
           >
-            <Link to="/login">Login</Link>
+            <Link to="/auth/login/student" className="hover:text-white">
+              Login
+            </Link>
           </Button>
         </div>
-        <Navbar.Collapse className="py-1 my-1">
+        <Navbar.Collapse className="">
           <div className="order-2 mx-auto mobile:hidden">
             <Button
-              className="px-4 bg-primary shadow-md"
-              gradientDuoTone={"tealToLime"}
+              className="px-4 bg-primary shadow-md text-white"
+              gradientDuoTone={"greenToBlue"}
             >
-              <Link to="/login">Login</Link>
+              <Link to="/auth/login/student" className="hover:text-white">
+                Login
+              </Link>
             </Button>
           </div>
           <NavLink to="/" title="Home" className={activeLink}>
             Home
           </NavLink>
-
           <NavLink to="/courses" title="Home" className={activeLink}>
             Courses
           </NavLink>
-
           <NavLink to="/about" title="Home" className={activeLink}>
             About
           </NavLink>
