@@ -1,4 +1,4 @@
-import { ILoginResponse, IUser } from "./@types";
+import { ILoginResponse } from "./@types";
 
 type ActionMap<M extends { [index: string]: unknown }> = {
   [Key in keyof M]: M[Key] extends undefined
