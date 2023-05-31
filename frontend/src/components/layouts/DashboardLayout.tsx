@@ -1,4 +1,4 @@
-import { Avatar, Breadcrumb, Dropdown, Navbar, Sidebar } from "flowbite-react";
+import { Avatar, Dropdown, Navbar, Sidebar } from "flowbite-react";
 import { Link, NavLink, Outlet } from "react-router-dom";
 import LogoComponent from "../LogoComponent";
 import "../../App.css";
