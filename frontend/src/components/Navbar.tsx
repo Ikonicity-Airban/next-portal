@@ -6,7 +6,7 @@ import LogoComponent from "./LogoComponent";
 
 export default function NavbarComponent(/* {}: Props */) {
   const activeLink: NavLinkProps["className"] = ({ isActive, isPending }) =>
-    `px-2 py-1 mx-auto font-bold order-1 ${
+    `px-2 py-1 mx-auto md:mx-0 font-bold order-1 ${
       isPending
         ? "text-gray-700"
         : isActive
@@ -17,7 +17,7 @@ export default function NavbarComponent(/* {}: Props */) {
   return (
     <section className=" w-full" style={{}}>
       <Navbar fluid rounded className="main-nav-bar sticky top-0 w-full">
-        <Navbar.Brand className="">
+        <Navbar.Brand className="flex-[1.9]">
           <div className="md:hidden px-2">
             <Navbar.Toggle />
           </div>
@@ -28,7 +28,7 @@ export default function NavbarComponent(/* {}: Props */) {
             </span>
           </Link>
         </Navbar.Brand>
-        <div className=" hidden md:order-1 sm:mx-0 mobile:block">
+        <div className=" hidden md:order-1 sm:mx-0 mobile:flex tablet:justify-end tablet:flex-[2]">
           <Button
             className="px-4 bg-primary shadow-md text-white"
             gradientDuoTone={"greenToBlue"}

@@ -8,6 +8,7 @@ import { HomePage, CoursePage } from "./components/index.tsx";
 import { QueryClientProvider, QueryClient } from "react-query";
 import LoginPage from "./components/auth/login/index.tsx";
 import SignUpPage from "./components/auth/signup/index.tsx";
+import { LoginLayout, SignUpLayout } from "./components/layouts/AuthLayout.tsx";
 
 const router = createBrowserRouter([
   {
@@ -34,10 +35,12 @@ const router = createBrowserRouter([
     children: [
       {
         path: "login",
+        element: <LoginLayout />,
         children: [
           {
             path: "student",
             element: <LoginPage></LoginPage>,
+            index: true,
           },
           {
             path: "instructor",
@@ -51,6 +54,7 @@ const router = createBrowserRouter([
       },
       {
         path: "create-account",
+        element: <SignUpLayout />,
         children: [
           {
             path: "student",
