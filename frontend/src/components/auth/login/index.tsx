@@ -2,7 +2,7 @@ import { Button, Card, Checkbox, Label, TextInput } from "flowbite-react";
 import LogoComponent from "../../LogoComponent";
 
 import { useForm, SubmitHandler } from "react-hook-form";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import axios from "axios";
 import { Types } from "../../../api/reducer";
@@ -17,6 +17,7 @@ interface IFormInput {
 
 function LoginPage() {
   const { register, handleSubmit } = useForm<IFormInput>();
+  // const navigate
 
   const { dispatch } = useContext(AppContext);
   const onSubmit: SubmitHandler<IFormInput> = async (data) => {
@@ -33,6 +34,9 @@ function LoginPage() {
     } catch (error) {
       console.log(error);
     }
+    // finally {
+
+    // }
   };
 
   const { pathname } = useLocation();
@@ -87,6 +91,7 @@ function LoginPage() {
           Submit
         </Button>
       </form>
+      <Link to="/dashboard">dashboard</Link>
     </Card>
   );
 }
