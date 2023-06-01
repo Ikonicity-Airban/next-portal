@@ -1,6 +1,6 @@
 import { useContext, useMemo } from "react";
 import { AppContext } from "../../api/context";
-import { Card, Progress } from "flowbite-react";
+import { Card, ListGroup, Progress } from "flowbite-react";
 
 function StudentDashboard() {
   const {
@@ -47,11 +47,11 @@ function StudentDashboard() {
     <div className="space-y-6">
       <hr />
       <div className="h1 my-4">
-        <h1 className="text-2xl font-semibold leading-normal text-indigo-800 cursor-pointer dark:text-white border-l-2 border-indigo-700 pl-4">
+        <h1 className="text-lg tablet:text-2xl font-semibold leading-normal cursor-pointer border-l-2 border-red-700 pl-4">
           Welcome to your Portal Dashboard
         </h1>
         <h1
-          className="text-4xl border-l-2 text border-indigo-300 pl-4"
+          className="text-4xl border-l-2 font-thin logo-clipped border-indigo-300 pl-4"
           title={role}
         >
           {role || "Enoch Focus"}
@@ -62,7 +62,7 @@ function StudentDashboard() {
         {cards.map(({ className, title, course, id, progress }) => (
           <Card className={className} id={id}>
             <div className="flex justify-between">
-              <span className="my-3 space-y-2">
+              <span className="my-1 space-y-2">
                 <h4>{title}</h4>
                 <p className="text-sm">{course}</p>
               </span>
@@ -78,6 +78,9 @@ function StudentDashboard() {
           </Card>
         ))}
       </div>
+      <ListGroup>
+        <ListGroup.Item></ListGroup.Item>
+      </ListGroup>
     </div>
   );
 }
