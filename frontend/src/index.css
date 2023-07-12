@@ -4,13 +4,49 @@
 
 @font-face {
   font-family: "Montserrat";
-  src: url("./Montserrat-Medium.ttf");
+  src: url("Montserrat-Medium.ttf");
 }
+@font-face {
+  font-family: "Robtronika";
+  src: url("Robtronika.ttf");
+}
+@font-face {
+  font-family: "Superbrigade";
+  src: url("Superbrigade.ttf");
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* font-size: 16px; */
+  font-size: 16px;
+  font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+h1 {
+  font-size: 3em;
+  line-height: 1.2;
+}
+h2 {
+  font-size: 2.2em;
+  line-height: 1.1;
+}
+h3 {
+  font-size: 1.6em;
+  line-height: 1.1;
+}
+h4 {
+  font-size: 1.2em;
+  line-height: 1.1;
+}
+
+p {
+  font-size: medium;
+  letter-spacing: 0.1px;
+  line-height: 2rem;
 }
 .title {
   color: transparent;
@@ -32,6 +68,8 @@
 }
 
 :root {
+  --font-robtronika: "Robtronika", sans-serif;
+  --font-sup: "Superbrigade", sans-serif;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -60,23 +98,6 @@ body {
     /* "Segoe UI", Tahoma, Geneva, Verdana, sans-serif */;
 }
 
-h1 {
-  font-size: 3em;
-  line-height: 1.2;
-}
-h2 {
-  font-size: 2.2em;
-  line-height: 1.1;
-}
-h3 {
-  font-size: 1.6em;
-  line-height: 1.1;
-}
-h4 {
-  font-size: 1.2em;
-  line-height: 1.1;
-}
-
 .ring-button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -99,7 +120,7 @@ h4 {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
+    color: #191f24;
     background-color: #ffffff;
   }
   a:hover {

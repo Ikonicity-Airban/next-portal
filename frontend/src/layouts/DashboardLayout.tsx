@@ -1,9 +1,9 @@
 import { Avatar, Dropdown, Navbar, Sidebar } from "flowbite-react";
 import { Link, Outlet } from "react-router-dom";
-import LogoComponent from "../LogoComponent";
-import "../../App.css";
+import LogoComponent from "../components/LogoComponent";
+import "../App.css";
 import { useState } from "react";
-import { BreadcrumbComponents } from "..";
+import { BreadcrumbComponents } from "../components";
 
 export const StudentLayout = () => {
   const [toggle, setToggle] = useState(false);
@@ -57,8 +57,7 @@ export const StudentLayout = () => {
         aria-label="Sidebar" /* className="h-screen fixed shadow-lg" */
         className="float-left fixed left-0 z-40 w-5/6  transition-transform h-screen border-r border-gray-300 dark:border-gray-800"
         style={{
-          transform:
-            toggle || width > 640 ? "translateX(0%)" : "translateX(-100%)",
+          transform: toggle ? "translateX(0%)" : "translateX(-100%)",
         }}
       >
         <Sidebar.ItemGroup className="">

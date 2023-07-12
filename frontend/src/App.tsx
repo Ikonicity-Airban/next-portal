@@ -5,11 +5,11 @@ import { FooterComponent } from "./components";
 
 function App() {
   return (
-    <section className="desktop:container mx-auto w-[98vw]">
+    <section className="w-[98vw] mx-auto">
       {/* header */}
       <NavbarComponent />
       {/* main body */}
-      <div className="min-h-screen flex place-content-center">
+      <div className="min-h-[70vh] w-full">
         {/* the children auth */}
         <Outlet />
       </div>

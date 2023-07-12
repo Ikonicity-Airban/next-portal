@@ -2,14 +2,14 @@ import { faKey } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Card } from "flowbite-react";
 import { Link, NavLink, Outlet } from "react-router-dom";
-import LoginPage from "../auth/login";
+import LoginPage from "../pages/login";
 
 export function LoginLayout() {
   return (
-    <main className="flex flex-col place-content-center space-y-5">
+    <main className="flex flex-col items-center justify-center space-y-5 my-9 p-2">
       <LoginPage />
-      <Card>
-        <h5 className="text-center space-y-4">Don't have an account?</h5>
+      <Card className="w-full">
+        <h5 className="text-center space-y-4 ">Don't have an account?</h5>
         <div className="text-gray-600 dark:text-gray-400 flex mx-auto space-x-2">
           <FontAwesomeIcon icon={faKey}></FontAwesomeIcon>
           <Link
@@ -26,7 +26,7 @@ export function LoginLayout() {
 }
 export function SignUpLayout() {
   return (
-    <main className="flex flex-col place-content-center space-y-5 p-10">
+    <main className="flex flex-col w-full items-center justify-center space-y-5 smallScreens:p-4">
       <div className="flex mt-4 rounded-md items-center justify-evenly text-xs">
         <NavLink
           to="student"
@@ -52,11 +52,11 @@ export function SignUpLayout() {
         </NavLink>
       </div>
       <Outlet />
-      <Card>
+      <Card className="w-full max-w-xl">
         <h5 className="text-center space-y-4">Already have an account?</h5>
         <div className="text-gray-500 dark:text-gray-400 flex mx-auto space-x-2">
           <FontAwesomeIcon icon={faKey}></FontAwesomeIcon>
-          <Link to="/auth/login/student" className="logo-clipped">
+          <Link to="/login" className="logo-clipped">
             Login
           </Link>
         </div>

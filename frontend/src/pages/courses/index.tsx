@@ -1,5 +1,5 @@
 import { Button, Sidebar } from "flowbite-react";
-import { BreadcrumbComponents } from "..";
+import { BreadcrumbComponents } from "../../components";
 import CoursesList from "./CoursesList";
 
 export default function CoursePage() {
@@ -28,16 +28,16 @@ export default function CoursePage() {
             className="w-full mobile:w-60"
           >
             <Sidebar.Items>
-              <h4 className="logo-clipped">All Courses</h4>
+              <h4 className="logo-clipped text-center p-2">All Courses</h4>
               <Sidebar.ItemGroup>
                 <Sidebar.Item>Science</Sidebar.Item>
                 <Sidebar.Item>Mathematics</Sidebar.Item>
                 <Sidebar.Item>Robotics</Sidebar.Item>
               </Sidebar.ItemGroup>
               <Sidebar.ItemGroup>
-                <Sidebar.CTA>
-                  <Button gradientDuoTone="greenToBlue">Sign Up</Button>
-                </Sidebar.CTA>
+                <Button className="w-full" gradientDuoTone="greenToBlue">
+                  Sign Up
+                </Button>
               </Sidebar.ItemGroup>
             </Sidebar.Items>
           </Sidebar>
