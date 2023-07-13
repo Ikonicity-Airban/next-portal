@@ -5,6 +5,10 @@ import { LoginLayout, SignUpLayout } from "./layouts/AuthLayout";
 import { StudentLayout } from "./layouts/DashboardLayout";
 import SignUpPage from "./pages/signup";
 import StudentDashboard from "./pages/student/Dashboard";
+import StudentCoursesPage from "./pages/student/courses";
+import AssignmentPage from "./pages/student/assignment";
+import ResultPage from "./pages/student/result";
+import StudentProfilePage from "./pages/student/profile";
 
 const router = createBrowserRouter([
   {
@@ -59,24 +63,20 @@ const router = createBrowserRouter([
         element: <StudentDashboard />,
       },
       {
-        path: ":id/my-courses",
-        element: <div>All course</div>,
+        path: "my-courses",
+        element: <StudentCoursesPage />,
       },
       {
         path: "assignment",
-        element: <div>All Assignments</div>,
-      },
-      {
-        path: "assignment/:id",
-        element: <div>All Assignments</div>,
+        element: <AssignmentPage />,
       },
       {
         path: "result",
-        element: <div>All Assignments</div>,
+        element: <ResultPage />,
       },
       {
         path: "my-profile",
-        element: <div>All Assignments</div>,
+        element: <StudentProfilePage />,
       },
     ],
   },

@@ -57,7 +57,7 @@ function LoginPage() {
   const currentUser = pathname.split("/")[3];
   //return
   return (
-    <Card className="min-w-[260px] max-w-md w-full">
+    <Card className="min-w-[260px] max-w-sm w-full">
       <span className="flex place-content-center">
         <h3 className="logo-clipped max-w-md">Login Form</h3>
       </span>

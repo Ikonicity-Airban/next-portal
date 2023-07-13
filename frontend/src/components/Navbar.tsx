@@ -18,7 +18,7 @@ export default function NavbarComponent(/* {}: Props */) {
     <Navbar
       fluid
       rounded
-      className="z-[999] bg-[#fff5] backdrop-blur-lg sticky top-0 w-full"
+      className="z-[999] shadow bg-[#fff5] backdrop-blur-lg sticky top-0 w-full"
     >
       <Navbar.Brand className="flex-[1.9]">
         <div className="md:hidden px-2">
@@ -26,7 +26,7 @@ export default function NavbarComponent(/* {}: Props */) {
         </div>
         <LogoComponent />
         <Link to="/">
-          <span className="logo-clipped p-0 pl-4 whitespace-nowrap text-primary text-lg font-extrabold">
+          <span className="font-robo font-xs logo-clipped p-0 pl-4 whitespace-nowrap ">
             Computronix
           </span>
         </Link>

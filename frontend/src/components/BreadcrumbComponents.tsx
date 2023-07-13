@@ -13,9 +13,7 @@ export default function BreadcrumbComponents() {
       <Link to="/">
         <Breadcrumb.Item className="">
           <i className="fa fa-home px-2 text-primary dark:text-white"></i>
-          <p className="text-sm laptop:text-lg font-semibold text-primary">
-            Home
-          </p>
+          <p className="font-robo text-xs font-semibold text-primary">Home</p>
         </Breadcrumb.Item>
       </Link>
       {pathArray.map((path, i) => (
@@ -23,7 +21,7 @@ export default function BreadcrumbComponents() {
           <Link
             to={`${i == pathArray.length - 1 ? "#" : "/" + path}`}
             className={
-              "first-letter:capitalize text-sm laptop:text-lg font-semibold shadow-lg dark:bg-slate-700 bg-white py-1 px-4 rounded-full " +
+              "font-robo first-letter:capitalize text-xs font-semibold shadow-lg dark:bg-slate-700 bg-white py-1 px-4 rounded-full " +
               `${i == pathArray.length - 1 ? "text--600" : "text-primary"}`
             }
           >

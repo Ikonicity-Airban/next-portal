@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
 import { QueryClientProvider, QueryClient } from "react-query";
-
+import "./index.css";
+import "@inovua/reactdatagrid-community/index.css";
 // import * as serviceWorker from "./service-worker.ts";
 import { AppProvider } from "./api/context.tsx";
 import { RouterProvider } from "react-router-dom";

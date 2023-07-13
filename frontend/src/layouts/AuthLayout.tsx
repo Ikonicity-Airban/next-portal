@@ -8,7 +8,7 @@ export function LoginLayout() {
   return (
     <main className="flex flex-col items-center justify-center space-y-5 my-9 p-2">
       <LoginPage />
-      <Card className="w-full">
+      <Card className="w-full max-w-sm">
         <h5 className="text-center space-y-4 ">Don't have an account?</h5>
         <div className="text-gray-600 dark:text-gray-400 flex mx-auto space-x-2">
           <FontAwesomeIcon icon={faKey}></FontAwesomeIcon>
